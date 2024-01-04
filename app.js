@@ -39,7 +39,7 @@ app.get("/create-quiz", (req, res) => {
 });
 app.get("/get-quiz", async (req, res) => {
     try {
-        const quizzes = await Quiz.find();
+        const quizzes = await QuizModel.find();
         console.log(quizzes);
         res.status(200).json({success: true, message: "data fetch successful", quizzes});
     } catch (error) {
